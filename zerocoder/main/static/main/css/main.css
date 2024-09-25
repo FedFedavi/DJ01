@@ -1,0 +1,17 @@
+body {
+    background-color: #f8f9fa;
+}
+
+aside {
+    border-right: 1px solid #dee2e6;
+}
+
+.nav-link.active {
+    font-weight: bold;
+    background-color: #e9ecef;
+    border-radius: 5px;
+}
+
+h3 {
+    font-family: 'Arial', sans-serif;
+}
