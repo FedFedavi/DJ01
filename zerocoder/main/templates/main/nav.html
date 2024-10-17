@@ -1,5 +1,22 @@
-<ul>
-    <li><a href="{% url 'index' %}">Главная страница</a></li>
-    <li><a href="{% url 'new' %}">Вторая страница</a></li>
+{% load static %}
 
-</ul>
+
+        <aside class="col-md-3 bg-light p-3 rounded">
+            <img src="/static/main/image/leo.jpg" alt="шкура леопарда" class="img-fluid rounded-circle mb-3">
+            <h3 class="text-center text-primary">PinkLeoDjango</h3>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active text-dark" href="/">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/new/">Второстепенная</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/page3/">Третья страница</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/page4/">Четвертая страница</a>
+                </li>
+            </ul>
+        </aside>
+
