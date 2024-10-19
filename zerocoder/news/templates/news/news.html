@@ -5,8 +5,16 @@
 {% endblock %}
 
 {% block content %}
-<h1>Новостная страница</h1>
 
+ <h1 class="mb-4">Новостная страница</h1>
+
+        {% for new in news %}
+            <div class="mb-4 p-3 bg-white rounded shadow-sm">
+                <h3 class="text-dark">{{ new.title }}</h3>
+                <p class="text-muted">{{ new.short_description }}</p>
+                <p>{{ new.text }}</p>
+                <small class="text-secondary">{{ new.pub_date }}</small>
+            </div>
+        {% endfor %}
 
 {% endblock %}
-
