@@ -7,7 +7,7 @@
 {% block content %}
 
  <h1 class="mb-4">Новостная страница</h1>
-
+    {% if news %}
         {% for new in news %}
             <div class="mb-4 p-3 bg-white rounded shadow-sm">
                 <h3 class="text-dark">{{ new.title }}</h3>
@@ -26,5 +26,7 @@
                     <small class="text-secondary">{{ new.pub_date }}</small>
                 </div>
         {% endfor %}
-
+    {% else %}
+        <h4 class="text-dark">Новостей еще нет</h4>
+    {% endif %}
 {% endblock %}

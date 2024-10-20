@@ -1,0 +1,34 @@
+{% extends 'main/layoute.html' %}
+
+{% block title %}
+    <title>Добавить новость</title>
+{% endblock %}
+
+{% block content %}
+
+ <h1 class="mb-4">Добавить новость</h1>
+
+ <div class="col-md-6 bg-light p-3 rounded">
+    <h3 class="text-center text-primary">Форма добавления новостей</h3>
+    <form method="post">
+    {% csrf_token %}
+        <div class="form-group mb-3">
+            {{form.title}}
+        </div>
+        <div class="form-group mb-3">
+            {{form.short_description}}
+        </div>
+        <div class="form-group mb-3">
+            {{form.text}}
+        </div>
+        <div class="form-group mb-3">
+            {{form.pub_date}}
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Добавить новость</button>
+    </form>
+       <p> {{error}} </p>
+</div>
+
+
+
+{% endblock %}
